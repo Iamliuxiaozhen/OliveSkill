@@ -1,0 +1,4 @@
+interface:
+  display_name: "Personal Engineering Workflow"
+  short_description: "Apply Oliver's software engineering workflow and safeguards"
+  default_prompt: "Use $personal-engineering-workflow for this software engineering task."
