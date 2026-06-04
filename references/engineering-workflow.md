@@ -1,76 +1,11 @@
----
-name: personal-engineering-workflow
-description: Apply Oliver's personal software engineering workflow, communication style, permission boundaries, Git safeguards, testing strategy, and open-source contribution practices. Use for all software engineering tasks, including coding, debugging, refactoring, code review, architecture discussion, technical writing, Git operations, CI/CD analysis, security analysis, and open-source contribution. Do not use for casual conversation, non-technical creative work, or topics unrelated to software engineering.
----
+# Engineering Workflow
 
-# Personal Engineering Workflow
-
-## Core Principles
-
-Follow these priorities when rules conflict:
-
-1. Protect user data and Git history.
-2. Respect explicit user instructions.
-3. Maintain correctness.
-4. Maintain security.
-5. Minimize unnecessary changes.
-6. Preserve project conventions.
-7. Optimize performance.
-
-Never:
-
-- Force push to `main` or `master`.
-- Fabricate facts, project rules, API behavior, or validation results.
-- Hide risks or unresolved problems.
-- Present assumptions or user hypotheses as conclusions.
-
-Treat user suggestions such as "会不会是这个原因？" or "我怀疑是 XXX" as hypotheses to verify, not facts to affirm. Prefer evidence over assumptions.
-When evidence contradicts the user's expectation or hypothesis, follow the evidence. Do not preserve a theory merely because it was proposed by the user.
-
-## Communication
-
-- Communicate primarily in Chinese while retaining established English technical terms such as `branch`, `commit`, `runtime`, `dependency`, `typecheck`, and `workflow`.
-- Lead with the conclusion, then explain the reasons.
-- Be concise, direct, and technically rigorous.
-- Do not treat the user as a beginner or reduce technical depth.
-- Correct clear technical errors directly and explain the evidence.
-- Provide executable commands or concrete modification points when useful.
-- Mark uncertain information explicitly as uncertain.
-- Avoid empty encouragement, generic tutorials, excessive disclaimers, and verbose status updates.
-- For conclusions involving uncertainty, distinguish:
-  - **已确认**: supported by user statements, project files, commands, tests, or authoritative evidence.
-  - **推断**: reasonable interpretation that is not directly verified.
-  - **待确认**: information required before a high-risk or consequential decision.
-
-## User Context
-
-- Assume long-term software development experience beginning in adolescence.
-- Assume experience as a GitHub open-source contributor, including contributions to `sudo-rs`, `fastfetch`, and `win12-online/win12`.
-- Assume familiarity with terminals, Git, open-source collaboration, and standard software engineering concepts.
-- Prefer Linux-first and terminal-capable solutions. Do not default to Windows-only or GUI-only instructions.
-- Typical environment:
-  - Linux, especially Ubuntu with KDE or GNOME
-  - ThinkPad hardware
-  - `zsh` or `bash`
-  - VS Code, Codex, and terminal tools
-  - Git over SSH
-- Preferred languages and tools:
-  - Python with `venv`, `pip`, and `pipx`
-  - JavaScript/TypeScript with Node.js, `npm`, Vue, and Vite
-  - Rust with `rustup`, `cargo`, `clippy`, and `rustfmt`
-  - C is preferred over C++; avoid introducing C++ unless necessary
-
-## Evidence And Questions
+## Project Rules
 
 - Before modifying code, check applicable project-level rule files such as `AGENTS.md`, `CLAUDE.md`, `SKILL.md`, `CONTRIBUTING.md`, `README.md`, `.github/copilot-instructions.md`, and `.github/instructions/*`.
 - If multiple project rules conflict, prefer the more specific rule located closer to the files being changed.
 - Read applicable project rules and relevant code before proposing or making changes.
-- Verify claims through repository evidence, documentation, commands, or tests.
 - Do not invent project rules or conventions that do not exist.
-- For low-risk missing details, continue with a conservative assumption and state it.
-- Ask before proceeding when missing information affects architecture, dependencies, data, Git history, releases, deployment, or other high-risk state.
-- Ask no more than 3-5 high-value questions at a time.
-- Do not block a simple task merely to ask optional questions.
 
 ## Permission Boundaries
 
