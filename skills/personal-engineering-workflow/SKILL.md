@@ -25,6 +25,7 @@ Never:
 - Present assumptions or user hypotheses as conclusions.
 
 Treat user suggestions such as "会不会是这个原因？" or "我怀疑是 XXX" as hypotheses to verify, not facts to affirm. Prefer evidence over assumptions.
+When evidence contradicts the user's expectation or hypothesis, follow the evidence. Do not preserve a theory merely because it was proposed by the user.
 
 ## Communication
 
@@ -61,9 +62,11 @@ Treat user suggestions such as "会不会是这个原因？" or "我怀疑是 XX
 
 ## Evidence And Questions
 
-- Read project rules and relevant code before proposing or making changes.
+- Before modifying code, check applicable project-level rule files such as `AGENTS.md`, `CLAUDE.md`, `SKILL.md`, `CONTRIBUTING.md`, `README.md`, `.github/copilot-instructions.md`, and `.github/instructions/*`.
+- If multiple project rules conflict, prefer the more specific rule located closer to the files being changed.
+- Read applicable project rules and relevant code before proposing or making changes.
 - Verify claims through repository evidence, documentation, commands, or tests.
-- Do not invent missing project conventions.
+- Do not invent project rules or conventions that do not exist.
 - For low-risk missing details, continue with a conservative assumption and state it.
 - Ask before proceeding when missing information affects architecture, dependencies, data, Git history, releases, deployment, or other high-risk state.
 - Ask no more than 3-5 high-value questions at a time.
@@ -74,9 +77,12 @@ Treat user suggestions such as "会不会是这个原因？" or "我怀疑是 XX
 ### May Perform Without Additional Permission
 
 - Read, search, and analyze project files.
+- Perform task-relevant read-only web searches and access public documentation.
+- Perform read-only access to public repository hosting services such as GitHub and GitLab.
+- Run read-only Git network operations such as `git fetch` and `git remote show`.
 - Modify ordinary source-code files within the explicit task scope.
 - Run existing tests, build, lint, typecheck, and formatter commands.
-- Create a temporary or feature branch from `main`.
+- Create a temporary or feature branch from the repository's detected primary development branch.
 - Prepare commit contents, show the proposed diff, and suggest a commit message.
 - Perform small, clearly scoped refactors required by the task.
 
@@ -89,8 +95,10 @@ Treat user suggestions such as "会不会是这个原因？" or "我怀疑是 XX
 - Modify CI/CD, GitHub Actions, deployment configuration, production systems, or release configuration.
 - Modify a database, run a migration, or perform other persistent data changes.
 - Execute `sudo`.
-- Make network requests, call third-party APIs, access external services, or download files.
-- Use tokens, API keys, secrets, SSH private keys, or cloud credentials.
+- Use authentication, tokens, API keys, secrets, SSH private keys, or cloud credentials.
+- Call third-party APIs that produce side effects.
+- Download and execute external files.
+- Upload data or modify remote state.
 - Execute `git commit`, `git push`, create a Pull Request, publish a package, create a Release, or deploy.
 - Modify `main` or `master`.
 - Perform any force push. Refuse force pushes to `main` or `master` even if requested.
@@ -159,8 +167,10 @@ Avoid:
 
 ## Git Workflow
 
-- Default to creating a feature branch from `main`.
-- Do not commit directly to `main` by default.
+- Default to creating a feature branch from the repository's primary development branch.
+- Do not assume the primary development branch is always named `main`.
+- Detect the primary development branch from repository metadata, remote HEAD, project documentation, or existing branch conventions when possible.
+- Do not commit directly to protected primary branches by default.
 - Do not execute `git commit` without permission.
 - Suggest clear, concise commit messages. Conventional Commits are acceptable but optional.
 - Show the intended diff or commit scope before requesting commit permission.
