@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">personal-engineering-workflow</h1>
+  <h1 align="center">OliverSkill</h1>
 </p>
 
 <p align="center">
@@ -41,7 +41,7 @@
 
 ## 项目介绍
 
-`personal-engineering-workflow` 是一个遵循 AgentSkills 结构的 Persona Skill。
+`OliverSkill` 是一个遵循 AgentSkills 结构的 Persona Skill。
 
 它的目标不是让 AI 模仿几句口头禅，也不只是规定如何写代码，而是让 Agent 在面对相同证据和约束时，大概率做出与作者一致的判断。
 
@@ -76,11 +76,11 @@
 - AI 给出高风险警告，却没有可复现证据
 - 合作伙伴的结论错误，但公开纠正会损害关系
 
-`personal-engineering-workflow` 使用大量具体场景观察真实选择，再提炼稳定模型。Agent 不只知道“重视安全”，还知道安全、交付、证据、可逆性和用户影响冲突时如何取舍。
+`OliverSkill` 使用大量具体场景观察真实选择，再提炼稳定模型。Agent 不只知道“重视安全”，还知道安全、交付、证据、可逆性和用户影响冲突时如何取舍。
 
 ## 与普通 Persona AI 有什么区别？
 
-| 场景 | 普通 Persona AI | personal-engineering-workflow |
+| 场景 | 普通 Persona AI | OliverSkill |
 |------|-----------------|-------------------------------|
 | 用户提出猜测 | 顺着用户继续推理 | 把猜测视为 hypothesis，主动验证 |
 | 权威结论 | 默认相信专家或官方 | 理解 authority，但以 evidence 决定结论 |
@@ -321,31 +321,31 @@ Authority 值得认真考虑，但身份不决定正确性。
 
 ## 安装
 
-将本仓库 clone 到 Agent 支持的 Skills 目录。下面使用 `<repository-url>` 作为仓库地址占位符。
+将本仓库 clone 到 Agent 支持的 Skills 目录：
 
 ### Claude Code
 
 ```bash
 # 当前项目
 mkdir -p .claude/skills
-git clone <repository-url> .claude/skills/personal-engineering-workflow
+git clone https://github.com/Iamliuxiaozhen/OliveSkill .claude/skills/oliver-skill
 
 # 全局安装
-git clone <repository-url> ~/.claude/skills/personal-engineering-workflow
+git clone https://github.com/Iamliuxiaozhen/OliveSkill ~/.claude/skills/oliver-skill
 ```
 
 ### Cursor
 
 ```bash
 mkdir -p .cursor/skills
-git clone <repository-url> .cursor/skills/personal-engineering-workflow
+git clone https://github.com/Iamliuxiaozhen/OliveSkill .cursor/skills/oliver-skill
 ```
 
 ### OpenClaw
 
 ```bash
 mkdir -p ~/.openclaw/workspace/skills
-git clone <repository-url> ~/.openclaw/workspace/skills/personal-engineering-workflow
+git clone https://github.com/Iamliuxiaozhen/OliveSkill ~/.openclaw/workspace/skills/oliver-skill
 ```
 
 ### 其他 AgentSkills 兼容工具
@@ -355,7 +355,7 @@ git clone <repository-url> ~/.openclaw/workspace/skills/personal-engineering-wor
 可以显式触发：
 
 ```text
-Use personal-engineering-workflow to evaluate this decision as Oliver would.
+Use oliver-skill to evaluate this decision as Oliver would.
 ```
 
 ---
@@ -363,7 +363,7 @@ Use personal-engineering-workflow to evaluate this decision as Oliver would.
 ## Skill 结构
 
 ```text
-personal-engineering-workflow/
+OliverSkill/
 ├── SKILL.md                          # Persona 入口、触发范围和冲突解析
 └── references/
     ├── identity.md                   # 身份、背景和稳定个人特征
