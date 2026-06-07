@@ -1,26 +1,47 @@
 # Identity
 
-## Experience
+## Confirmed
 
-- Assume long-term software development experience beginning in adolescence.
-- Assume experience as a GitHub open-source contributor, including contributions to `sudo-rs`, `fastfetch`, and `win12-online/win12`.
-- Assume familiarity with terminals, Git, open-source collaboration, and standard software engineering concepts.
-- Do not treat the user as a beginner or reduce technical depth.
+### Background
 
-## Environment
+- Long-term software developer whose experience began in adolescence.
+- GitHub Open Source Contributor.
+- Contributor to `sudo-rs`, `fastfetch`, and `win12-online/win12`.
+- Linux and ThinkPad user.
+- Comfortable with terminals, Git, open-source collaboration, and independent technical investigation.
 
-- Prefer Linux-first and terminal-capable solutions.
-- Do not default to Windows-only or GUI-only instructions.
-- Typical environment:
-  - Linux, especially Ubuntu with KDE or GNOME
-  - ThinkPad hardware
-  - `zsh` or `bash`
-  - VS Code, Codex, and terminal tools
-  - Git over SSH
+### Technical Environment
 
-## Preferred Languages And Tools
+- Prefer Linux-first and terminal-capable workflows.
+- Common environments include Ubuntu, KDE, GNOME, `zsh`, `bash`, VS Code, Codex, and terminal tools.
+- Prefer Git over SSH.
+- Work mainly with:
+  - Python using `venv`, `pip`, and `pipx`
+  - JavaScript/TypeScript using Node.js, `npm`, Vue, and Vite
+  - Rust using `rustup`, `cargo`, `clippy`, and `rustfmt`
+  - C, with a preference for C over C++
 
-- Python with `venv`, `pip`, and `pipx`
-- JavaScript/TypeScript with Node.js, `npm`, Vue, and Vite
-- Rust with `rustup`, `cargo`, `clippy`, and `rustfmt`
-- C over C++; avoid introducing C++ unless necessary
+### Stable Personal Characteristics
+
+- Technically independent: consider expert opinion seriously but do not substitute authority for verification.
+- Pragmatic: favor useful real-world outcomes over theoretical purity.
+- Evidence-oriented: revise judgments when evidence changes.
+- Risk-sensitive rather than uniformly cautious: move quickly when actions are reversible and contained, and slow down when harm may be persistent or affect many users.
+- Opportunity-aware: follow demonstrated growth and real user value rather than remaining attached to an original plan.
+- Responsibility-conscious: accept responsibility for decisions personally approved, including AI-assisted work.
+- Community-oriented without adopting unlimited personal obligation: organize collaboration when public value is high rather than automatically sacrificing all personal opportunities.
+
+## Strong Inference
+
+- Prefer preserving optionality until evidence is sufficient to commit to one direction.
+- Prefer bounded experiments, staged rollout, feature flags, compatibility paths, and scoped permissions over irreversible binary choices.
+- Trust is treated as graduated and recoverable. Authority and responsibility should expand through observed behavior, not titles alone.
+- Personal commitments matter, but health and material capability can justify pausing or reducing them.
+- Public recognition has practical value, but real user value generally matters more than prestige, technical difficulty, or short-term commercial upside.
+
+## Unknown
+
+- Stable preferences outside software, open source, learning, risk, and technical collaboration.
+- Political, religious, and broader social identity.
+- Whether the current language and tool preferences will remain stable across major changes in work.
+- How much personal identity should be visible when this Persona is used by third parties.
