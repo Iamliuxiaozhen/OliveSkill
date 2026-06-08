@@ -41,7 +41,7 @@
 
 ## 项目介绍
 
-`OliverSkill` 是一个遵循 AgentSkills 结构的 Persona Skill。
+`OliveSkill` 是一个遵循 AgentSkills 结构的 Persona Skill。
 
 它的目标不是让 AI 模仿几句口头禅，也不只是规定如何写代码，而是让 Agent 在面对相同证据和约束时，大概率做出与作者一致的判断。
 
@@ -76,11 +76,11 @@
 - AI 给出高风险警告，却没有可复现证据
 - 合作伙伴的结论错误，但公开纠正会损害关系
 
-`OliverSkill` 使用大量具体场景观察真实选择，再提炼稳定模型。Agent 不只知道“重视安全”，还知道安全、交付、证据、可逆性和用户影响冲突时如何取舍。
+`OliveSkill` 使用大量具体场景观察真实选择，再提炼稳定模型。Agent 不只知道“重视安全”，还知道安全、交付、证据、可逆性和用户影响冲突时如何取舍。
 
 ## 与普通 Persona AI 有什么区别？
 
-| 场景 | 普通 Persona AI | OliverSkill |
+| 场景 | 普通 Persona AI | OliveSkill |
 |------|-----------------|-------------------------------|
 | 用户提出猜测 | 顺着用户继续推理 | 把猜测视为 hypothesis，主动验证 |
 | 权威结论 | 默认相信专家或官方 | 理解 authority，但以 evidence 决定结论 |
@@ -328,24 +328,24 @@ Authority 值得认真考虑，但身份不决定正确性。
 ```bash
 # 当前项目
 mkdir -p .claude/skills
-git clone https://github.com/Iamliuxiaozhen/OliveSkill .claude/skills/oliver-skill
+git clone https://github.com/Iamliuxiaozhen/OliveSkill .claude/skills/oliveskill
 
 # 全局安装
-git clone https://github.com/Iamliuxiaozhen/OliveSkill ~/.claude/skills/oliver-skill
+git clone https://github.com/Iamliuxiaozhen/OliveSkill ~/.claude/skills/oliveskill
 ```
 
 ### Cursor
 
 ```bash
 mkdir -p .cursor/skills
-git clone https://github.com/Iamliuxiaozhen/OliveSkill .cursor/skills/oliver-skill
+git clone https://github.com/Iamliuxiaozhen/OliveSkill .cursor/skills/oliveskill
 ```
 
 ### OpenClaw
 
 ```bash
 mkdir -p ~/.openclaw/workspace/skills
-git clone https://github.com/Iamliuxiaozhen/OliveSkill ~/.openclaw/workspace/skills/oliver-skill
+git clone https://github.com/Iamliuxiaozhen/OliveSkill ~/.openclaw/workspace/skills/oliveskill
 ```
 
 ### 其他 AgentSkills 兼容工具
@@ -355,7 +355,7 @@ git clone https://github.com/Iamliuxiaozhen/OliveSkill ~/.openclaw/workspace/ski
 可以显式触发：
 
 ```text
-Use oliver-skill to evaluate this decision as Oliver would.
+Use oliveskill to evaluate this decision as Oliver would.
 ```
 
 ---
@@ -363,7 +363,7 @@ Use oliver-skill to evaluate this decision as Oliver would.
 ## Skill 结构
 
 ```text
-OliverSkill/
+OliveSkill/
 ├── SKILL.md                          # Persona 入口、触发范围和冲突解析
 └── references/
     ├── identity.md                   # 身份、背景和稳定个人特征
