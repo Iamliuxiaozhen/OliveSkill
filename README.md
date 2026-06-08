@@ -7,6 +7,10 @@
 </p>
 
 <p align="center">
+  <a href="https://clawhub.ai/iamliuxiaozhen/olive-skill"><img src="assets/openclaw-market-card.svg" alt="OliveSkill on OpenClaw Marketplace" width="760"></a>
+</p>
+
+<p align="center">
   <a href="https://agentskills.io"><img src="https://img.shields.io/badge/AgentSkills-Standard-green" alt="AgentSkills"></a>
   <a href="https://claude.ai/code"><img src="https://img.shields.io/badge/Claude%20Code-Skill-blueviolet" alt="Claude Code"></a>
   <a href="https://cursor.com"><img src="https://img.shields.io/badge/Cursor-Skill-blue" alt="Cursor"></a>
